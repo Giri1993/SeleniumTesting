@@ -28,9 +28,7 @@ public class NewTest {
 		EventFiringWebDriver e1=new EventFiringWebDriver(driver);
 		File f1=e1.getScreenshotAs(OutputType.FILE);
 		File f2=new File(".\\screenshot\\accHomepage.jpg");
-		
 		FileUtils.copyFile(f1, f2);
-		
 		driver.findElement(By.linkText("Log out")).click();
 		driver.switchTo().alert().dismiss();
   }
@@ -39,13 +37,16 @@ public class NewTest {
   public Object[][] dp() {
     return new Object[][] {
       new Object[] { "mngr175232", "unubYnU" },
-      new Object[] { "mngr175232", "unub" },
+      new Object[] { "mngr175232", "unub456" },
+      new Object[] { "ahvbgdadf2", "unubYnU"},
+      new Object[] { "fhjhhfnfv7", "fdfhhfh34"},
+      new Object[] { "mngr175232", "unubYnU" },
     };
   }
   @BeforeTest
   public void beforeTest() {
 	  driver=new FirefoxDriver();
-		driver.get(" http://www.demo.guru99.com/V4/");
+		driver.get("http://www.demo.guru99.com/V4/");
   }
 
   @AfterTest
